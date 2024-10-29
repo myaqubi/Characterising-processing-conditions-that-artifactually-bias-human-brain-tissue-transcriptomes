@@ -86,10 +86,6 @@ tiff('High_PMI_final_samples_vs_surgery_control_down_reg_GO.tiff', units="in", w
 barplot(Go_results_highPMI_vs_control_downreg, showCategory = 20)
 dev.off()
 
-### Single nuclear RNAseq data analysis
-The package (scFlow) that was used to analyse the single nuclear data https://github.com/neurogenomics/scFlow
-
-
 ### Using the results of the DESeq2 DEG analysis or the volcano plot in python
 
 import pandas as pd
