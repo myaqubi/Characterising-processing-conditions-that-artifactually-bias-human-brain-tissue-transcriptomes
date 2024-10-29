@@ -59,7 +59,7 @@ head(resSig)
 write.csv(as.data.frame(resSig), "deseq2_significant_genes_treatment_vs_control.csv")
 
 
-### Suing the DESeq2 outoput file for the GO analysis
+### Using the DESeq2 outoput file for the GO analysis
 
 library(clusterProfiler)
 counts_data <- read.csv("deseq2_significant_genes_treatment_vs_control.csv", check.names = FALSE)
@@ -85,6 +85,9 @@ write.csv(Go_results_highPMI_vs_control_downreg@result, file = "Go_results_highP
 tiff('High_PMI_final_samples_vs_surgery_control_down_reg_GO.tiff', units="in", width=10, height=2, res=300, compression = 'lzw')
 barplot(Go_results_highPMI_vs_control_downreg, showCategory = 20)
 dev.off()
+
+### Single nuclear RNAseq data analysis
+The package (scFlow) that was used to analyse the single nuclear data https://github.com/neurogenomics/scFlow
 
 
 ### Using the results of the DESeq2 DEG analysis or the volcano plot in python
